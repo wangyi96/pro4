@@ -1,0 +1,1204 @@
+@import "reset.css";
+html,
+body {
+  height: 100%;
+  overflow: hidden;
+}
+canvas {
+  position: absolute;
+  z-index: 10;
+  left: 0;
+  top: 0;
+  /*给一个过渡效果*/
+  transition: 1s opacity;
+}
+.pmc {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.page-2-leftLine {
+  position: absolute;
+  left: 0;
+  top: 2.8rem;
+  width: 4.2rem;
+  height: 1rem;
+}
+.page-2-rightLine {
+  position: absolute;
+  right: 0;
+  top: 2.8rem;
+  width: 4.2rem;
+  height: 1rem;
+  transform: rotate(180deg);
+}
+#wrap {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+#wrap .points {
+  position: fixed;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto 0;
+  width: .7rem;
+  height: 4.2rem;
+  z-index: 8;
+}
+#wrap .points li {
+  width: .3rem;
+  margin: 0 auto .3rem;
+  height: .3rem;
+  border-radius: 50%;
+  background: rgba(249, 249, 249, 0.5);
+}
+#wrap .points li.active {
+  background: rgba(0, 0, 0, 0);
+  border: 1px solid #fff;
+}
+#wrap .page-1 {
+  position: absolute;
+  z-index: 2;
+  width: 100%;
+  height: 100%;
+  background: #0297EB;
+}
+#wrap .page-1 > div {
+  opacity: 0;
+}
+#wrap .page-1 .page-1-logo {
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  width: 6rem;
+  height: 2rem;
+  top: 2.5rem;
+}
+#wrap .page-1 .page-1-title {
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  width: 14rem;
+  height: 1rem;
+  top: 5rem;
+}
+#wrap .page-1 .page-1-wrap {
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  z-index: 1;
+  width: 14rem;
+  height: 14rem;
+  bottom: 2.6rem;
+}
+#wrap .page-1 .page-1-meteor {
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  width: 100%;
+  height: 76%;
+  bottom: 0;
+}
+#wrap .page-1 .page-1-gold {
+  position: absolute;
+  z-index: 2;
+  width: 6rem;
+  height: 3rem;
+  bottom: 2.6rem;
+  right: 2rem;
+}
+#wrap .page-1 .page-1-goldBag {
+  position: absolute;
+  z-index: 2;
+  width: 8rem;
+  height: 8rem;
+  bottom: 5.3rem;
+  right: 3.5rem;
+}
+#wrap .page-1 .page-1-redPointT {
+  position: absolute;
+  z-index: 1;
+  width: 3rem;
+  height: 3rem;
+  top: 9rem;
+  left: 3rem;
+}
+#wrap .page-1 .page-1-redPointB {
+  position: absolute;
+  z-index: 1;
+  width: 2rem;
+  height: 2rem;
+  bottom: .6rem;
+  right: 4rem;
+}
+#wrap .page-1 .page-1-whitePoint {
+  position: absolute;
+  z-index: 2;
+  width: 1.2rem;
+  height: 1rem;
+  bottom: .5rem;
+  right: 7rem;
+}
+#wrap .page-2 {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background: url(../image/page-2-7.jpg) no-repeat;
+  background-size: 100% 100%;
+}
+#wrap .page-2 > div,
+#wrap .page-2 > p {
+  opacity: 0;
+}
+#wrap .page-2 .page-2-title {
+  position: absolute;
+  left: 4.5rem;
+  top: 2rem;
+  width: 6rem;
+  height: 2.4rem;
+}
+#wrap .page-2 .page-2-title > img {
+  height: 50%;
+}
+#wrap .page-2 .page-2-mark {
+  position: absolute;
+  top: 2rem;
+  right: 4.1rem;
+  color: #f59c00;
+  font-family: 微软雅黑;
+  font-size: 2.4rem;
+  line-height: 2.4rem;
+  width: 1rem;
+  height: 2.4rem;
+}
+#wrap .page-2 .page-2-text {
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  width: 13rem;
+  height: 1.2rem;
+  top: 5rem;
+}
+#wrap .page-2 .page-2-outerRing {
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  width: 13.1rem;
+  height: 13rem;
+  bottom: 4rem;
+}
+#wrap .page-2 .page-2-innerRing {
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  width: 9rem;
+  height: 9rem;
+  bottom: 6rem;
+}
+#wrap .page-2 .page-2-arrowhead {
+  position: absolute;
+  right: 2.4rem;
+  top: 10rem;
+  width: 5rem;
+  height: 4rem;
+}
+#wrap .page-2 .page-2-rocked {
+  position: absolute;
+  right: 1.5rem;
+  top: 8.5rem;
+  width: 3.4rem;
+  height: 3rem;
+}
+#wrap .page-2 .icon {
+  width: 3rem;
+  height: 3rem;
+}
+#wrap .page-2 .page-2-icon2 {
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  bottom: 13.5rem;
+}
+#wrap .page-2 .page-2-icon2Text {
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  bottom: 12.2rem;
+  width: 2rem;
+  color: white;
+}
+#wrap .page-2 .page-2-icon4 {
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  bottom: 5rem;
+}
+#wrap .page-2 .page-2-icon4Text {
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  bottom: 3.7rem;
+  width: 3rem;
+  color: white;
+}
+#wrap .page-2 .page-2-icon1 {
+  position: absolute;
+  left: 2.25rem;
+  bottom: 9.5rem;
+}
+#wrap .page-2 .page-2-icon1Text {
+  position: absolute;
+  left: 2.75rem;
+  bottom: 8.2rem;
+  width: 2rem;
+  color: white;
+}
+#wrap .page-2 .page-2-icon3 {
+  position: absolute;
+  right: 2.25rem;
+  bottom: 9.5rem;
+}
+#wrap .page-2 .page-2-icon3Text {
+  position: absolute;
+  right: .5rem;
+  bottom: 8.2rem;
+  width: 6rem;
+  color: white;
+}
+#wrap .page-3 {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background: url(../image/page-3-9.jpg) no-repeat;
+  background-size: 100% 100%;
+}
+#wrap .page-3 > div,
+#wrap .page-3 > p {
+  opacity: 0;
+}
+#wrap .page-3 .page-3-logo {
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  top: 1.5rem;
+  width: 6rem;
+  height: 2rem;
+}
+#wrap .page-3 .page-3-title1 {
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  top: 3.7rem;
+  width: 8rem;
+  height: 1.5rem;
+}
+#wrap .page-3 .page-3-title2 {
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  top: 5.6rem;
+  width: 10rem;
+  height: 1.5rem;
+}
+#wrap .page-3 .page-3-title3 {
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  top: 7.3rem;
+  text-align: center;
+  width: 100%;
+}
+#wrap .page-3 .page-3-title3 > span {
+  color: #ffffff;
+  font-family: 微软雅黑;
+  line-height: 22px;
+  font-size: 0.65rem;
+}
+#wrap .page-3 .page-3-threeLine {
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  bottom: 4rem;
+  width: 12rem;
+  height: 12rem;
+}
+#wrap .page-3 .page-3-triangle {
+  position: absolute;
+  left: 1rem;
+  top: 7rem;
+  width: 13rem;
+  height: 12rem;
+}
+#wrap .page-3 .page-3-centerIcon {
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  bottom: 5rem;
+  width: 7rem;
+  height: 7rem;
+}
+#wrap .page-3 .page-3-centerIcon .page-3-centerIconInner {
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  bottom: 2.8rem;
+  width: 4rem;
+  height: 1.3rem;
+}
+#wrap .page-3 .page-3-icon {
+  position: absolute;
+  width: 4.8rem;
+  height: 4.8rem;
+}
+#wrap .page-3 .page-3-icon .page-3-iconInner {
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  bottom: 1rem;
+  width: 2.8rem;
+  height: 2.8rem;
+}
+#wrap .page-3 .page-3-topIcon {
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  right: .3rem;
+  bottom: 13rem;
+}
+#wrap .page-3 .page-3-topIcon .page-3-topIconInner {
+  left: .2rem;
+}
+#wrap .page-3 .page-3-topIconText {
+  position: absolute;
+  right: 2rem;
+  bottom: 14.5rem;
+  color: #fff;
+  width: 3.2rem;
+  font-size: .8rem ;
+  line-height: 1rem;
+  text-align: center;
+}
+#wrap .page-3 .page-3-leftIcon {
+  left: 0;
+  bottom: 2rem;
+}
+#wrap .page-3 .page-3-leftIcon .page-3-leftIconInner {
+  width: 2.6rem;
+  height: 2rem;
+  left: .3rem;
+  bottom: 1.3rem;
+}
+#wrap .page-3 .page-3-leftIconText {
+  position: absolute;
+  left: .7rem;
+  bottom: 7.3rem;
+  color: #fff;
+  width: 3.2rem;
+  font-size: .8rem ;
+  line-height: 1rem;
+  text-align: center;
+}
+#wrap .page-3 .page-3-rightIcon {
+  right: 0;
+  bottom: 2rem;
+}
+#wrap .page-3 .page-3-rightIcon .page-3-rightIconInner {
+  width: 4.5rem;
+  height: 3.5rem;
+  left: .3rem;
+  bottom: .8rem;
+}
+#wrap .page-3 .page-3-rightIconText {
+  position: absolute;
+  text-align: center;
+  right: .7rem;
+  bottom: 7.3rem;
+  color: #fff;
+  width: 3.2rem;
+  font-size: .8rem ;
+  line-height: 1rem;
+}
+#wrap .page-4 {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background: url(../image/page-4-9.jpg) no-repeat;
+  background-size: 100% 100%;
+}
+#wrap .page-4 > div {
+  opacity: 0;
+}
+#wrap .page-4 .page-4-title1 {
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  top: 2.5rem;
+  width: 5.5rem;
+  height: 1rem;
+}
+#wrap .page-4 .page-4-title2 {
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  top: 4rem;
+  width: 10rem;
+  height: 1rem;
+}
+#wrap .page-4 .page-4-circle1 {
+  position: absolute;
+  left: 1.2rem;
+  top: 6rem;
+  width: 5rem;
+  height: 5rem;
+}
+#wrap .page-4 .page-4-circle1 > div {
+  opacity: 0;
+}
+#wrap .page-4 .page-4-circle1 .page-4-circleText1 {
+  position: absolute;
+  top: 1.8rem;
+  left: .3rem;
+  font-size: .85rem;
+  width: 5rem;
+  height: 5rem;
+}
+#wrap .page-4 .page-4-circle1 .page-4-circleText2 {
+  position: absolute;
+  top: 2.8rem;
+  left: .3rem;
+  font-size: .55rem;
+  width: 5rem;
+  height: 5rem;
+}
+#wrap .page-4 .page-4-cloud1 {
+  position: absolute;
+  top: 5rem;
+  right: .3rem;
+  width: 3.5rem;
+  height: 2rem;
+  opacity: 0;
+}
+#wrap .page-4 .page-4-cloud2 {
+  position: absolute;
+  top: 8rem;
+  right: 4.5rem;
+  width: 2.5rem;
+  height: 1.5rem;
+}
+#wrap .page-4 .page-4-circle2 {
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  width: 11rem;
+  height: 11rem;
+  bottom: 5rem;
+}
+#wrap .page-4 .page-4-circle3 {
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  width: 15rem;
+  height: 15rem;
+  bottom: 3rem;
+}
+#wrap .page-4 .page-4-cols {
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  width: 7rem;
+  height: 4rem;
+  bottom: 6.8rem;
+  opacity: 1;
+}
+#wrap .page-4 .page-4-cols > div {
+  opacity: 0;
+}
+#wrap .page-4 .page-4-cols .page-4-col1 {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 1rem;
+  height: 1rem;
+}
+#wrap .page-4 .page-4-cols .page-4-col2 {
+  position: absolute;
+  left: 1.5rem;
+  bottom: 0;
+  width: 1rem;
+  height: 1.5rem;
+}
+#wrap .page-4 .page-4-cols .page-4-col3 {
+  position: absolute;
+  left: 3rem;
+  bottom: 0;
+  width: 1rem;
+  height: 2.2rem;
+}
+#wrap .page-4 .page-4-cols .page-4-col4 {
+  position: absolute;
+  left: 4.5rem;
+  bottom: 0;
+  width: 1rem;
+  height: 3.5rem;
+}
+#wrap .page-4 .page-4-cols .page-4-col5 {
+  position: absolute;
+  left: 6rem;
+  bottom: 0;
+  width: 1rem;
+  height: 5rem;
+}
+#wrap .page-4 .page-4-line {
+  position: absolute;
+  left: 4.5rem;
+  bottom: 8.5rem;
+  width: 5.5rem;
+  height: 3.8rem;
+}
+#wrap .page-4 .page-4-rocket {
+  position: absolute;
+  right: 2.5rem;
+  bottom: 12.5rem;
+  width: 4rem;
+  height: 4rem;
+}
+#wrap .page-4 .page-4-stars {
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  width: 10rem;
+  height: 8rem;
+  bottom: 7rem;
+}
+#wrap .page-4 .page-4-stars .page-4-star1 {
+  position: absolute;
+  left: 0;
+  top: 1rem;
+  width: 1.4rem;
+  height: 1.4rem;
+}
+#wrap .page-4 .page-4-stars .page-4-star2 {
+  position: absolute;
+  left: 1.5rem;
+  top: 3.5rem;
+  width: 1rem;
+  height: 1rem;
+}
+#wrap .page-4 .page-4-stars .page-4-star3 {
+  position: absolute;
+  right: .5rem;
+  bottom: 2.5rem;
+  width: .8rem;
+  height: .8rem;
+}
+#wrap .page-4 .page-4-stars .page-4-star4 {
+  position: absolute;
+  right: 0.4rem;
+  bottom: 0;
+  width: .6rem;
+  height: .6rem;
+}
+#wrap .page-4 .page-4-text {
+  position: absolute;
+  text-align: center;
+}
+#wrap .page-4 .page-4-text .page-4-textT {
+  font-size: 0.9rem;
+  font-family: 微软雅黑;
+  color: #fff600;
+  line-height: 1.1rem;
+}
+#wrap .page-4 .page-4-text .page-4-textB {
+  font-family: 微软雅黑;
+  color: #fff;
+  font-size: 0.8rem;
+}
+#wrap .page-4 .page-4-text1 {
+  bottom: 11rem;
+  right: .8rem;
+}
+#wrap .page-4 .page-4-text2 {
+  bottom: 5rem;
+  right: .8rem;
+  opacity: 1;
+}
+#wrap .page-4 .page-4-text2 > p {
+  opacity: 0;
+}
+#wrap .page-4 .page-4-text3 {
+  bottom: 4rem;
+  left: 1.5rem;
+}
+#wrap .page-5 {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background: url(../image/page-3-9.jpg) no-repeat;
+  background-size: 100% 100%;
+}
+#wrap .page-5 > div {
+  opacity: 0;
+}
+#wrap .page-5 .page-5-backgronud {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+#wrap .page-5 .page-5-line {
+  position: absolute;
+  left: .5rem;
+  top: 4rem;
+  width: 5rem;
+  height: 20rem;
+}
+#wrap .page-5 .page-5-wrap {
+  position: absolute;
+  left: 1.2rem;
+  top: 7rem;
+  width: 14rem;
+  height: 17rem;
+  opacity: 1;
+}
+#wrap .page-5 .page-5-wrap > div {
+  opacity: 0;
+}
+#wrap .page-5 .page-5-wrap .page-5-wrapBg {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+#wrap .page-5 .page-5-wrap .page-5-innerTopLeft {
+  position: absolute;
+  left: 2rem;
+  top: 2rem;
+  width: 3.5rem;
+  height: 2rem;
+}
+#wrap .page-5 .page-5-wrap .page-5-innerTopPlus {
+  position: absolute;
+  left: 6rem;
+  top: 2.5rem;
+  width: 1rem;
+  height: 1rem;
+  color: #fff;
+}
+#wrap .page-5 .page-5-wrap .page-5-innerTopRight {
+  position: absolute;
+  right: 1rem;
+  top: 2rem;
+  width: 5.7rem;
+  height: 2rem;
+}
+#wrap .page-5 .page-5-wrap .page-5-innerText {
+  position: absolute;
+  left: .5rem;
+  bottom: .2rem;
+  width: 13rem;
+  height: 12rem;
+}
+#wrap .page-5 .page-5-wrap .page-5-innerText > span {
+  display: block;
+  font-size: 0.65rem;
+  color: #fff;
+  line-height: 1.2rem;
+}
+#wrap .page-5 .page-5-wrap .page-5-increase {
+  position: absolute;
+  right: 1.5rem;
+  bottom: 1.8rem;
+  width: 6rem;
+  height: 5rem;
+}
+#wrap .page-5 .page-5-circle {
+  position: absolute;
+  left: 3rem;
+  top: 1.5rem;
+  width: 4.6rem;
+  height: 4.5rem;
+}
+#wrap .page-5 .page-5-logo {
+  position: absolute;
+  left: 3.4rem;
+  top: 1.9rem;
+  width: 3.7rem;
+  height: 3.7rem;
+  background: #fff;
+  border-radius: 50% ;
+}
+#wrap .page-5 .page-5-logo .page-5-logoImg {
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  top: 1.4rem;
+  width: 3rem;
+  height: 1rem;
+  opacity: 0;
+}
+#wrap .page-5 .page-5-title {
+  position: absolute;
+  right: 2rem;
+  top: 2.8rem;
+  width: 6rem;
+  height: 2rem;
+}
+#wrap .page-6 {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background: url(../image/page-6-6.jpg) no-repeat;
+  background-size: 100% 100%;
+}
+#wrap .page-6 > div {
+  opacity: 0;
+}
+#wrap .page-6 .page-6-title1 {
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  top: 2rem;
+  width: 5rem;
+  height: 1.3rem;
+}
+#wrap .page-6 .page-6-title2 {
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  top: 3.7rem;
+  width: 6.5rem;
+  height: 1rem;
+}
+#wrap .page-6 .page-6-lists {
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  bottom: 3rem;
+  width: 15rem;
+  height: 18rem;
+}
+#wrap .page-6 .page-6-lists > li {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 3rem;
+}
+#wrap .page-6 .page-6-lists > li > div {
+  opacity: 0;
+}
+#wrap .page-6 .page-6-lists > li .page-6-listDate {
+  position: absolute;
+  width: 4rem;
+  top: 0.5rem;
+  left: 0;
+}
+#wrap .page-6 .page-6-lists > li .page-6-listDate > span {
+  color: #71a8d9;
+  font-size: 0.6rem;
+  line-height: 1.1rem;
+}
+#wrap .page-6 .page-6-lists > li .page-6-listDate > img {
+  position: absolute;
+  top: .3rem;
+  right: .1rem;
+  width: .7rem;
+  height: .7rem;
+}
+#wrap .page-6 .page-6-lists > li .page-6-listArrow {
+  position: absolute;
+  width: .4rem;
+  height: .5rem;
+  top: 1.9rem;
+  left: 3.37rem;
+}
+#wrap .page-6 .page-6-lists > li .page-6-listContent {
+  position: absolute;
+  right: 0;
+  width: 10.8rem;
+  height: 2.3rem;
+}
+#wrap .page-6 .page-6-lists > li .page-6-listContent > span {
+  position: absolute;
+  top: .4rem;
+  left: 1rem;
+  width: 9.5rem;
+  color: #fff;
+  font-size: 0.6rem;
+  line-height: 0.7rem;
+}
+#wrap .page-6 .page-6-lists .page-6-list2 {
+  top: 3rem;
+}
+#wrap .page-6 .page-6-lists .page-6-list3 {
+  top: 6rem;
+}
+#wrap .page-6 .page-6-lists .page-6-list4 {
+  top: 9rem;
+}
+#wrap .page-6 .page-6-lists .page-6-list5 {
+  top: 12rem;
+}
+#wrap .page-6 .page-6-lists .page-6-list6 {
+  top: 15rem;
+}
+#wrap .page-7 {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background: url(../image/page-7-9.jpg) no-repeat;
+  background-size: 100% 100%;
+}
+#wrap .page-7 > div {
+  opacity: 0;
+}
+#wrap .page-7 .page-7-title {
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  z-index: 1;
+  top: 8rem;
+  width: 10rem;
+  height: 5rem;
+}
+#wrap .page-7 .page-7-text {
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  z-index: 1;
+  top: 13rem;
+  left: 1rem;
+  width: 5.6rem;
+  height: 4rem;
+  transform: rotate(353deg);
+  opacity: 1;
+}
+#wrap .page-7 .page-7-text > div {
+  opacity: 0;
+}
+#wrap .page-7 .page-7-text span {
+  display: block;
+  color: #ffe400;
+  font-size: 0.8rem;
+  line-height: 1.1rem;
+}
+#wrap .page-7 .page-7-circle {
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  top: 6.5rem;
+  left: 1rem;
+  width: 10rem;
+  height: 10rem;
+  transform: rotate(-50deg);
+}
+#wrap .page-7 .page-7-background {
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  width: 15rem;
+  height: 65%;
+}
+#wrap .page-7 .page-7-icon1 {
+  position: absolute;
+  z-index: 1;
+  top: 4rem;
+  left: 1rem;
+  width: 3.5rem;
+  height: 3.5rem;
+}
+#wrap .page-7 .page-7-icon2 {
+  position: absolute;
+  z-index: 1;
+  top: 2rem;
+  right: 2rem;
+  width: 2.5rem;
+  height: 2.8rem;
+}
+#wrap .page-7 .page-7-icon3 {
+  position: absolute;
+  z-index: 1;
+  top: 14rem;
+  right: 1.2rem;
+  width: 1.6rem;
+  height: 1.5rem;
+}
+#wrap .page-7 .page-7-icon4 {
+  position: absolute;
+  z-index: 1;
+  bottom: 5rem;
+  right: .8rem;
+  width: 3.5rem;
+  height: 3.9rem;
+}
+#wrap .page-7 .page-7-icon5 {
+  position: absolute;
+  z-index: 1;
+  bottom: 8rem;
+  left: .8rem;
+  width: 3rem;
+  height: 7rem;
+}
+#wrap .page-7 .page-7-icon6 {
+  position: absolute;
+  z-index: 1;
+  top: 4rem;
+  left: 7rem;
+  width: 1rem;
+  height: 1rem;
+}
+#wrap .page-7 .page-7-button {
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  bottom: 4rem;
+  width: 7rem;
+  text-align: center;
+  background-color: #F59C00;
+  color: #FFFFFF;
+  border-radius: 10px;
+  border: 1px solid #fff;
+  font-size: 1.2rem;
+  opacity: 0;
+}
+#wrap .arrow {
+  position: fixed;
+  z-index: 10;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  bottom: 1rem;
+  width: 1rem;
+  height: .8rem;
+  background: url(../image/arrow.png) no-repeat;
+  background-size: 100% 100%;
+  animation: moving 1s linear infinite  ;
+}
+#wrap .music img {
+  position: fixed;
+  z-index: 10;
+  right: .6rem;
+  top: .6rem;
+  width: 1.7rem;
+  height: 1.7rem;
+}
+@keyframes moving {
+  0% {
+    transform: translateY(0);
+    opacity: 0;
+  }
+  20% {
+    transform: translateY(-0.4rem);
+    opacity: 1;
+  }
+  60% {
+    transform: translateY(-0.6rem);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-1rem);
+    opacity: 0;
+  }
+}
+@keyframes music {
+  0% {
+    transform: rotate(-360deg);
+  }
+}
+@keyframes moveFromRight {
+  from {
+    transform: translateX(12rem);
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes moveFromLeft {
+  from {
+    transform: translateX(-12rem);
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes shortMoveFromTop {
+  from {
+    transform: translateY(-2rem);
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes shortMoveFromBottom {
+  from {
+    transform: translateY(2rem);
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes longMoveFromTop {
+  from {
+    transform: translateY(-10rem);
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes longMoveFromBottom {
+  from {
+    transform: translateY(10rem);
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+@keyframes rotateCir {
+  from {
+    transform: rotate(0deg);
+    opacity: 1;
+  }
+  to {
+    transform: rotate(360deg);
+    opacity: 1;
+  }
+}
+@keyframes shortMoveFromLeft {
+  from {
+    transform: translateX(-2rem);
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes shortMoveFromRight {
+  from {
+    transform: translateX(2rem);
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes scaleFromBig {
+  0% {
+    transform: scale(2.5);
+  }
+  50% {
+    transform: scale(0.7);
+  }
+  76% {
+    transform: scale(1.2);
+  }
+  92% {
+    transform: scale(0.9);
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes scaleFromLittle {
+  0% {
+    transform: scale(0);
+  }
+  50% {
+    transform: scale(1.3);
+  }
+  76% {
+    transform: scale(0.8);
+  }
+  92% {
+    transform: scale(1.1);
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes rotateY {
+  0% {
+    transform: rotateY(0deg) scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: rotateY(180deg) scale(1.5);
+    opacity: 1;
+  }
+  100% {
+    transform: rotateY(360deg) scale(1);
+    opacity: 1;
+  }
+}
+@keyframes longMoveFromLeft {
+  from {
+    transform: translateX(-10rem);
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes longMoveFromRight {
+  from {
+    transform: translateX(10rem);
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes rotate180 {
+  from {
+    transform: rotate(180deg);
+  }
+  to {
+    opacity: 1;
+  }
+}
